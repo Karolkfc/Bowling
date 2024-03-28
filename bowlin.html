@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOT BOWLING</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'koulen', sans-serif;
+      background: linear-gradient(to right, #22A898, #B45723);
+    }
+
+    header {
+      background: linear-gradient(to right, #22A898, #B45723);
+      padding: 10px 0;
+      text-align: center;
+    }
+    .personal-cabinet {
+      background: #B45723;
+            border-style: none;
+            margin-right: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header button {
+      float: right;
+    }
+
+    main {
+      text-align: center;
+    }
+
+    main img {
+      width: 100%;
+      height: auto;
+    }
+
+    .left-section, .right-section, .center-section {
+  text-align: center;
+}
+
+.left-section, .right-section {
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Post No Bills Colombo ExtraBold';
+  color: white;
+  font-weight: bold;
+  flex: 1;
+}
+
+.center-section {
+  flex: 2;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+
+  .left-section, .right-section, .center-section {
+    margin-bottom: 20px;
+  }
+}
+
+    .white-bar {
+      background-color: white;
+      height: 5px;
+      width: 100%;
+    }
+
+    .texti {
+      text-align: center;
+      font-size: 50px;
+      font-family: 'Post No Bills Colombo ExtraBold';
+      color: white;
+      font-weight: bold;
+    }
+
+    .texTI {
+      text-align: center;
+      font-size: 30px;
+      font-family: 'Post No Bills Colombo ExtraBold';
+      color: white;
+      font-weight: bold;
+    }
+
+    .text-lefts {
+      text-align: center;
+      font-size: 35px;
+      font-family: 'Post No Bills Colombo ExtraBold';
+      color: black;
+      font-weight: bold;
+    }
+
+.contact-footer {
+  background: linear-gradient(to right, #22A898, #B45723);
+  background-color: #f4f4f4;
+  padding: 20px 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Post No Bills Colombo ExtraBold';
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
+.contact-section {
+  font-size: 25px;
+  font-family: 'Post No Bills Colombo ExtraBold';
+  color: black;
+  font-weight: bold;
+  flex: 1;
+  margin: 10px;
+}
+
+.search-container button[type="submit"] {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: #26C7B3;
+  color: white;
+  cursor: pointer;
+  font-family: 'Post No Bills Colombo ExtraBold';
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-container select,
+.search-container input[type="text"] {
+  font-size: 16px;
+  font-family: 'Post No Bills Colombo ExtraBold';
+  font-weight: bold;
+  padding: 25px;
+  border: none;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.search-container select {
+  width: 7%;
+}
+
+.search-container input[type="text"] {
+  width: 35%;
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  font-family: 'Post No Bills Colombo ExtraBold';
+}
+
+.modal-content {
+  background: linear-gradient(to right, #22A898, #B45723);
+  margin: 10% auto;
+  padding: 50px;
+  border: 10px solid #D78D37;
+  width: 50%;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal-content input {
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-family: 'Post No Bills Colombo ExtraBold';
+  font-weight: bold;
+}
+
+/* Добавьте этот стиль для кнопки в модальном окне */
+.modal-content button {
+  background-color: #26C7B3;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Post No Bills Colombo ExtraBold';
+  font-weight: bold;
+}
+
+/* Добавьте этот стиль для кнопки в модальном окне при наведении */
+.modal-content button:hover {
+  background-color: #24a38a;
+}
+
+
+.close {
+  color: black;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .contact-section {
+    flex: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><img src="img/Group 1.png" alt="name">
+    <button class="personal-cabinet"><a href="//"> <img src="img/hhhhh.png" alt="lk"></a></button>
+    </h1>
+  </header>
+
+  <main>
+    <img src="img/image 4 (1).png" alt="Main Image">
+
+    <div class="search-container">
+      <select name="class">
+        <option value="all">ВРЕМЯ</option>
+        <option value="economy">1 час</option>
+        <option value="premium">2 часа</option>
+      </select>
+      <select name="class1">
+        <option value="all">ЦЕНА</option>
+        <option value="economy">2000 руб</option>
+        <option value="premium">3500 руб</option>
+      </select>
+      <button type="submit" id="bookButton" data-target="myModal">ЗАБРОНИРОВАТЬ</button>
+    </div>
+
+    <div class="texti">
+    <p>ВАЖНО</p>
+    </div>
+    <div class="texTI">
+      <p>На дорожке разрешено играть до 6 человек. Для комфортной игры, без долгого ожидания очереди на бросок, рекомендуем разделиться по 3-4 человека на дорожку.</p>
+      <p>Деньги за неиспользованное время не возвращаются!</p>
+    </div>
+
+    <div class="white-bar"></div>
+
+  <footer class="contact-footer">
+    <div class="contact-container">
+      <h2>КОНТАКТНЫЕ ДАННЫЕ</h2>
+      <div class="contact-section">
+        <p>Время работы</p>
+        <p>ПН 14:00-00:00</p>
+        <p>ВТ-ЧТ 12:00-00:00</p>
+        <p>ПТ 12:00-02:00</p>
+        <p>СБ 10:00-02:00</p>
+        <p>ВС 10:00-00:00</p>
+      </div>
+      <div class="contact-section">
+        <p>Адрес</p>
+        <p>Россия, Алтайский край, г. Барнаул, Павловский тракт, 78.ТРЦ "Большой", 4 этаж.</p>
+      </div>
+      <div class="contact-section">
+        <p>Забронировать</p>
+        <p>+7 288 - 228 - 78 - 78</p>
+        <p>hot.bowling22@mail.ru</p>
+      </div>
+    </div>
+  </footer>
+
+<!-- Добавляем модальное окно в конец вашего body -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>УКАЖИТЕ ВАШИ ДАННЫЕ</h2>
+    <p>На указанные вами данные мы также будем присылать различные новости и акции</p>
+    <form>
+      <label for="name">ИМЯ:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">ТЕЛЕФОН:</label>
+      <input type="text" id="phone" name="phone" required>
+
+      <button type="button" id="bookReservation">ЗАБРОНИРОВАТЬ</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Получаем элементы
+  var modal = document.getElementById('myModal');
+  var btn = document.getElementById('bookButton');
+  var span = document.getElementsByClassName('close')[0];
+  var bookReservationBtn = document.getElementById('bookReservation');
+
+  // При клике на кнопку "ЗАБРОНИРОВАТЬ", открываем модальное окно
+  btn.onclick = function() {
+    modal.style.display = 'block';
+  }
+
+  // При клике на крестик, закрываем модальное окно
+  span.onclick = function() {
+    modal.style.display = 'none';
+  }
+
+  // При клике на кнопку "ЗАБРОНИРОВАТЬ" в модальном окне, можно добавить обработчик
+  bookReservationBtn.onclick = function() {
+    // Здесь вы можете добавить логику обработки введенных данных
+    alert('Бронирование успешно!');
+    modal.style.display = 'none'; // Закрываем модальное окно после бронирования
+  }
+
+  // При клике вне модального окна, закрываем его
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
+
+</body>
+</html>

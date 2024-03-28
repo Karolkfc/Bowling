@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'koulen', sans-serif;
+            background: linear-gradient(to right, #22A898, #B45723);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #22A898, #B45723);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo {
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .profile-container {
+            font-family: 'Post No Bills Colombo ExtraBold';
+            font-weight: bold;
+            background: linear-gradient(to right, #22A898, #B45723);
+            border: 10px solid #D78D37;
+            border-radius: 30px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            font-size: 20px;
+        }
+
+        .profile-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            cursor: pointer; /* Добавлено для указания на возможность изменения */
+        }
+
+        .profile-container input[type="file"] {
+            display: none; /* Скрыть стандартную кнопку выбора файла */
+        }
+
+        .profile-container input[type="text"],
+        .profile-container input[type="password"],
+        .profile-container input[type="email"],
+        .profile-container input[type="tel"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            font-size: 15px;
+            font-family: 'Post No Bills Colombo ExtraBold';
+            font-weight: bold;
+        }
+
+        .profile-container button {
+            background-color: #26C7B3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 15px;
+            font-family: 'Post No Bills Colombo ExtraBold';
+            font-weight: bold;
+        }
+
+        footer {
+            background: linear-gradient(to right, #22A898, #B45723);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .profile-container {
+                width: 50%;
+            }
+        }
+    </style>
+    <title>Личный кабинет</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="bowling.html"><img src="img/Group 1.png" alt="logo"></a></div>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <label for="avatar-input"> <!-- Добавлено для открытия окна выбора файла при нажатии на изображение -->
+                <img id="avatar" src="img/med.jpg" alt="Avatar">
+            </label>
+            <input id="avatar-input" type="file" accept="image/*" style="display: none;"> <!-- Скрытая кнопка выбора файла -->
+            <h2>Добро пожаловать!</h2>
+            <form>
+                <input type="text" placeholder="Новый логин">
+                <br>
+                <input type="password" placeholder="Новый пароль">
+                <br>
+                <input type="password" placeholder="Повторите новый пароль">
+                <br>
+                <input type="email" placeholder="Новая почта">
+                <br>
+                <input type="tel" placeholder="Новый телефон">
+                <br>
+                <button type="submit">Сохранить изменения</button>
+            </form>
+            <button onclick="location.href='bowling.html'">Выйти</button>
+        </div>
+
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
